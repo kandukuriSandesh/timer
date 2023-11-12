@@ -25,7 +25,7 @@ export const startTimer = () => {
 }
 
 export const endTimer = (limit = 2) => {
-   if(typeof limit !== Number){
+   if(typeof limit !== 'number'){
       console.log('Please Enter the Number')
       return "Please Enter the Number"
    }  
@@ -37,5 +37,3 @@ export const endTimer = (limit = 2) => {
   initiatedTime = ''
   return diff
 }
-
-
