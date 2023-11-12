@@ -9,7 +9,7 @@ function diff_Time(dt2,dt1,limit){
     var ss = (dtsec / 1000)
     const timerObj =  {
        milliseconds:dtsec,
-       time:`hh ${hh} mm ${mm - hh*60} ss ${(ss - mm*60).toFixed(limit || 2)}`,
+       time:`hh ${hh} mm ${mm - hh*60} ss ${(ss - mm*60).toFixed(limit)}`,
        hh,mm,ss
       } 
    console.log(timerObj);
@@ -24,7 +24,7 @@ export const startTimer = () => {
    initiatedTime = new Date()
 }
 
-export const endTimer = (limit) => {
+export const endTimer = (limit = 2) => {
    if(typeof limit !== Number){
       console.log('Please Enter the Number')
       return "Please Enter the Number"
